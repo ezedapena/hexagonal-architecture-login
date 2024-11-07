@@ -14,7 +14,7 @@ const permissionsMock: Permissions = {
 
 
 export class ControlAuthenticatorStub implements ForControlAuthenticating {
-
+    // agregamos _varName para mosterar que no estamos usando las variables a posta y no tener problemas con el linter
     getAuthDetails(_email: string, _password: string): Promise<AuthDetails> {
         return Promise.resolve(authDetailsMock)
     }

@@ -1,0 +1,1 @@
+Armamos archivos del tipo "stub" ya que mockean la llamada a un servicio externo, base de datos con los usuarios

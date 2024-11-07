@@ -1,5 +1,5 @@
 import { User as RepoUser } from "../../../repository/app/schemas";
-import { User } from "../../ports/drivers";
+import { User } from "../../app/schemas";
 import { ForRepoQuerying } from "../../ports/drivens";
 
 const userMock: RepoUser = {
@@ -10,10 +10,10 @@ const userMock: RepoUser = {
 
 export class RepoQuerierStub implements ForRepoQuerying {
     getUser(_email: string): Promise<RepoUser> {
-        throw new Error("Method not implemented.");
+        return Promise.resolve(userMock);
     }
     createUser(_user: User, _password: string): Promise<RepoUser> {
-        throw new Error("Method not implemented.");
+        return Promise.resolve(userMock);
     }
 
 }

@@ -1,0 +1,2 @@
+Podemos considerar que cada uno de nuestros "Services" es un hexagono en si que se comunica con los demas
+Cada uno con sus respectivos "Adapters" para gestionar las acciones de entrada al hexagono "drivers" y las de salida "drivens" quienes se comunican con otros hexagonos

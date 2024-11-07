@@ -1,0 +1,4 @@
+Los puertos son los encargados de limitar las acciones disponibles a realizar, con sus requisitos
+Esto lo realiza a base de interfaces, marcando las reglas a seguir en la aplicacion
+
+Luego los proxys seran los encargadosde solicitar estas acciones, siendo los mismos el medio y el puerto quien les muestra las posibles acciones a realizar

@@ -1,0 +1,3 @@
+Este hexagono deberia tener puertos de entrada "drivers" para realizar una accion en la api ( login y register )
+No se comunica directamente con la base datos para realizar las acciones, este debe realizar un trigger en otro hexagono a traves de sus drivens,
+para validar un usuario debe acceder al servicio de control-plane adapter, y para retornar los valores del usuario deberemos interactuar con el repository adapter

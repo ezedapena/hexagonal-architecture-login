@@ -1,5 +1,6 @@
 import { ForControlAuthenticating, ForRepoQuerying } from "../ports/drivens";
-import { AuthenticatedUser, ForAuthenticating, User } from "../ports/drivers";
+import { ForAuthenticating } from "../ports/drivers";
+import { AuthenticatedUser, User } from "./schemas";
 
 export class DasboardApi implements ForAuthenticating {
 
