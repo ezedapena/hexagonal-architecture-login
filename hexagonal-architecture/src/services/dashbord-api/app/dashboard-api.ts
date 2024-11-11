@@ -2,9 +2,14 @@ import { ForControlAuthenticating, ForRepoQuerying } from "../ports/drivens";
 import { ForAuthenticating } from "../ports/drivers";
 import { AuthenticatedUser, User } from "./schemas";
 
+// los "implements" son drivers
 export class DasboardApi implements ForAuthenticating {
 
-    constructor(private readonly controlAuthenticator: ForControlAuthenticating, private readonly repoQuerier: ForRepoQuerying) { }
+    constructor(
+        //drivens
+        private readonly controlAuthenticator: ForControlAuthenticating,
+        private readonly repoQuerier: ForRepoQuerying
+    ) {}
 
 
     async login(email: string, password: string): Promise<AuthenticatedUser> {
@@ -15,7 +20,7 @@ export class DasboardApi implements ForAuthenticating {
         return {
             ...user,
             ...authDetails,
-            ...permissions
+            permissions
         }
     }
 
@@ -27,7 +32,7 @@ export class DasboardApi implements ForAuthenticating {
         return {
             ...newUser,
             ...authDetails,
-            ...permissions
+            permissions
         }
 
     }
